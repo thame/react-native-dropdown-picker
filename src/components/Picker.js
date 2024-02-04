@@ -143,6 +143,7 @@ function Picker({
   scrollViewProps = {},
   searchable = false,
   searchContainerStyle = {},
+  SearchLeftIconComponent = null,
   searchPlaceholder = null,
   searchPlaceholderTextColor = Colors.GREY,
   searchTextInputProps = {},
@@ -1751,6 +1752,7 @@ function Picker({
     () =>
       isSearchComponentVisible && (
         <View style={_searchContainerStyle}>
+          {SearchLeftIconComponent}
           {searchable ? (
             <TextInput
               value={searchText}
